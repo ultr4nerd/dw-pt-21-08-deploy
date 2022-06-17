@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="title">Usuarios</h1>
+    <div class="content">
+      {% for user in users %}
+      <p>
+        <a href="{% url 'me:profile' user.username %}">@{{ user.username }}</a>
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

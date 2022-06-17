@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="title">Perfil de @{{ user.username }}</h1>
+    <div class="content">
+      <h4>Lenguajes de programación</h4>
+      <ul>
+        {% for language in languages %}
+        <li>{{ language.get_name_display }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock content %}

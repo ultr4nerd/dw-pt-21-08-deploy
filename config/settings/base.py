@@ -76,7 +76,10 @@ THIRD_PARTY_APPS = [
     "crispy_bootstrap5",
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    "resume.me",
+]
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -167,7 +170,6 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "resume.users.context_processors.allauth_settings",
             ],
         },
     }
