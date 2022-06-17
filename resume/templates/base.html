@@ -1,0 +1,31 @@
+{% load static i18n %}<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Mi Portafolio{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi CV">
+    <meta name="author" content="Mauricio Chávez Olea">
+
+    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+
+    {% block css %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+    {% endblock %}
+    <!-- Le javascript
+    ================================================== -->
+    {# Placed at the top of the document so pages load faster with defer #}
+    {% block javascript %}
+      <script defer src="{% static 'js/project.js' %}"></script>
+    {% endblock javascript %}
+  </head>
+
+  <body>
+    {% block content %}{% endblock content %}
+    {% block modal %}{% endblock modal %}
+    {% block inline_javascript %}{% endblock inline_javascript %}
+  </body>
+</html>
