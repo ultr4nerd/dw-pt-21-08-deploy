@@ -17,16 +17,60 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ProgrammingLanguage',
+            name="ProgrammingLanguage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
-                ('name', models.PositiveSmallIntegerField(choices=[(0, 'Python'), (1, 'JavaScript'), (2, 'Java'), (3, 'C'), (4, 'C++'), (5, 'C#'), (6, 'PHP'), (7, 'Go'), (8, 'Rust'), (9, 'Dart')])),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "created",
+                    model_utils.fields.AutoCreatedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="created",
+                    ),
+                ),
+                (
+                    "modified",
+                    model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
+                    ),
+                ),
+                (
+                    "name",
+                    models.PositiveSmallIntegerField(
+                        choices=[
+                            (0, "Python"),
+                            (1, "JavaScript"),
+                            (2, "Java"),
+                            (3, "C"),
+                            (4, "C++"),
+                            (5, "C#"),
+                            (6, "PHP"),
+                            (7, "Go"),
+                            (8, "Rust"),
+                            (9, "Dart"),
+                        ]
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]
