@@ -6,7 +6,7 @@ from django.views import defaults as default_views
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    path("", include("me.urls")),
+    path("", include("resume.me.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
